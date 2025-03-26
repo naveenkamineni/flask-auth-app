@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  flask-app:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      mysql:
+        condition: service_healthy  # ✅ Ensure MySQL is ready before Flask starts
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: ["python", "app.py"]  # ✅ Explicitly run Flask app
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Naveen
+      MYSQL_DATABASE: flask_auth
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+      start_period: 30s  # ✅ Give MySQL time to initialize
+
+volumes:
+  mysql_data:
+

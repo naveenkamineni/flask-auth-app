@@ -1,0 +1,7 @@
+flask
+flask-mysqldb
+flask-bcrypt
+flask-login
+gunicorn
+python-dotenv
+werkzeug
