@@ -1,5 +1,5 @@
-# Flask Authentication App ((Registeration--> flask --> MySQL)-(Login--> flask <--> MySQL)-Docker + AWS EC2)
-
+# Flask Authentication App (Registeration-->Flask-->Login-->MySQL)+Docker+AWS(EC2)
+                                    
 ## 🚀 Overview
 This is a **User Registration & Login** application built with **Flask**, running inside a **Docker container**, and storing user credentials in a **MySQL database**. The entire setup is deployed on an **AWS EC2 instance**.
 
