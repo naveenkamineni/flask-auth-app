@@ -94,8 +94,8 @@ Once the container is running, open your browser and go to:
 
 ---
 
-## 🎯 Expected UI
-Once the setup is successful, you should see the following UI:
+## 🎯 Expected File Structure
+Once the setup is successful, you should see the following File Structure in your Current Directory and Now, you can the applocation on the web using docker with ip followed by port number:
 
 ![Flask Auth App](https://github.com/user-attachments/assets/656b3064-410c-4cec-afe3-288d98ea3563)
 
